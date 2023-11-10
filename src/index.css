@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+li {
+  list-style: none;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(2) rotate(1deg);
+  }
+  100% {
+    transform: scale(1) rotate(-1deg);
+  }
+}
+
+#bg-overlay{
+  overflow: hidden;
+}
+
+#bg-overlay img {
+  animation: zoomInOut 6s infinite alternate;
+  overflow: hidden;
+}
+
+
+
+#bg-overlay:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(31, 77, 14, 0.6);
+  z-index: 1;
+  overflow: hidden;
+}
+
+#bg-overlay-soon:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 2, 22, 0.6);
+  z-index: 1;
+}
+
